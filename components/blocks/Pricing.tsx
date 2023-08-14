@@ -169,7 +169,7 @@ export function PricingBlock({ data, index }) {
         <RichTextWrapper>
           <Wrapper>
             {data.intro && (
-              <div className="intro-text text-center">
+              <div className="text-center intro-text">
                 <TinaMarkdown content={data.intro} />
               </div>
             )}
@@ -253,7 +253,7 @@ export function PricingBlock({ data, index }) {
             0 2px 4px rgba(0, 37, 91, 0.03);
           background: white;
           max-width: 152rem;
-          margin: 0 auto 4rem auto
+          margin: 0 auto 4rem auto;
 
           :global(> *) {
             box-shadow: none;

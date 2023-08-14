@@ -77,6 +77,7 @@ module.exports = {
       '8xl': ['96px', { lineHeight: '1' }],
       '9xl': ['128px', { lineHeight: '1' }],
     },
+    typography: require('./typography'),
     opacity: {
       0: '0',
       5: '.05',
@@ -105,6 +106,17 @@ module.exports = {
       animation: {
         'slide-in': 'slideIn 200ms ease-out 1',
       },
+      maxWidth: {
+        lg: '33rem',
+        '2xl': '40rem',
+        '3xl': '50rem',
+        '5xl': '66rem',
+      },
+      opacity: {
+        1: '0.01',
+        2.5: '0.025',
+        7.5: '0.075',
+      },
       boxShadow: {
         xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
         sm: '0 1px 3px 0 rgba(20, 70, 150, 0.05)',
@@ -114,6 +126,7 @@ module.exports = {
         panel:
           '6px 4px 16px rgba(0,132,255, 0.07), 10px 8px 32px rgba(0,132,255, 0.07), 18px 16px 64px rgba(0,132,255, 0.1)',
         outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+        glow: '0 0 4px rgb(0 0 0 / 0.1)',
       },
       dropShadow: {
         sm: '0 1px 1px rgb(20 70 150 / 0.05)',
@@ -167,6 +180,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        serif: ['Poppins', ...defaultTheme.fontFamily.serif], 
         tuner: ['tuner-medium', ...defaultTheme.fontFamily.sans],
         'tuner-light': ['tuner-regular', ...defaultTheme.fontFamily.sans],
       },
@@ -188,6 +202,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
   ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',

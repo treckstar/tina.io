@@ -26,11 +26,11 @@ const Testimonial = ({ data, ...props }) => {
           />
         </div>
       )}
-      <div className="flex gap-4 items-center">
+      <div className="flex items-center gap-4">
         {data.avatar && (
           <div className="relative shrink-0 w-14 h-14 rounded-full shadow-[0_1px_3px_1px_rgba(66,_153,_225,0.3)] overflow-hidden">
             <Image
-              alt="Testimonial avatar"
+              alt={`${data.name}'s avatar`}
               width={56}
               height={56}
               className={`block absolute w-full h-full top-0 left-0 object-fill ${
@@ -45,7 +45,7 @@ const Testimonial = ({ data, ...props }) => {
         )}
         <div className="flex flex-col">
           {data.name && (
-            <h4 className="text-lg lg:text-xl font-tuner text-blue-800 font-medium">
+            <h4 className="text-lg font-medium text-blue-800 lg:text-xl font-tuner">
               {data.name}
             </h4>
           )}
@@ -56,7 +56,7 @@ const Testimonial = ({ data, ...props }) => {
                 <span className="mx-1.5 opacity-30">&ndash;</span>
               )}
               {data.date && (
-                <span className="opacity-70 text-blue-600">
+                <span className="text-blue-600 opacity-70">
                   {formatDate(data.date)}
                 </span>
               )}

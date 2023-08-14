@@ -193,19 +193,19 @@ const components: Components<{
     </iframe>
   ),
   CloudinaryVideo: ({ src }) => (
-    <video className="video my-6" autoPlay loop muted playsInline>
+    <video className="my-6 video" autoPlay loop muted playsInline>
       <source src={src + `.webm`} type="video/webm" />
       <source src={src + `.mp4`} type="video/mp4" />
     </video>
   ),
   Button: ({ link, label }) => (
-    <div className="w-full flex justify-start my-6">
+    <div className="flex justify-start w-full my-6">
       <a
         className="px-6 pt-[12px] pb-[10px] text-base font-medium transition duration-150 ease-out rounded-full flex items-center gap-1 font-tuner whitespace-nowrap focus:outline-none focus:shadow-outline hover:-translate-y-px active:translate-y-px hover:-translate-x-px active:translate-x-px leading-tight text-white hover:text-gray-50 border border-orange-600 bg-gradient-to-br from-orange-400 to-orange-600"
         href={link}
         target="_blank"
       >
-        {label} <BiRightArrowAlt className="h-5 w-auto -mt-1 opacity-70" />
+        {label} <BiRightArrowAlt className="w-auto h-5 -mt-1 opacity-70" />
       </a>
     </div>
   ),
@@ -247,7 +247,7 @@ function BlogTemplate({ file, siteConfig, ...props }) {
     <Layout>
       <NextSeo
         title={frontmatter.title}
-        titleTemplate={'%s | ' + siteConfig.title + ' Blog'}
+        titleTemplate={'%s | ' + siteConfig.title ?? 'Tina' + ' Blog'}
         description={excerpt}
         openGraph={{
           title: frontmatter.title,
@@ -256,7 +256,7 @@ function BlogTemplate({ file, siteConfig, ...props }) {
             frontmatter.opengraph?.image ||
               openGraphImage(
                 frontmatter.title,
-                ' | TinaCMS Blog',
+                ' | treckstarCMSBlog',
                 frontmatter.author
               ),
           ],
@@ -264,7 +264,7 @@ function BlogTemplate({ file, siteConfig, ...props }) {
       />
       <Hero>{frontmatter.title}</Hero>{' '}
       <div className="p-6">
-        <div className="py-12 lg:py-16 last:pb-20 last:lg:pb-32 max-w-prose mx-auto">
+        <div className="py-12 mx-auto lg:py-16 last:pb-20 last:lg:pb-32 max-w-prose">
           <DocsTextWrapper>
             <BlogMeta>
               <MetaWrap>
@@ -311,7 +311,7 @@ export const getStaticProps: GetStaticProps = async function ({
       query: res.query,
       data: res.data,
       vars,
-      siteConfig: { title: siteConfig.title || 'TinaCMS' },
+      siteConfig: { title: siteConfig.title ?? 'Tina' },
     },
   }
 }
