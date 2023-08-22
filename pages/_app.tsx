@@ -23,7 +23,7 @@ const MainLayout = ({ Component, pageProps }) => {
         description={data.description}
         openGraph={{
           type: 'website',
-          locale: 'en_CA',
+          locale: 'en_US',
           url: data.siteUrl,
           site_name: data.title,
           images: [
@@ -84,7 +84,7 @@ const AdminLink = () => {
   return (
     <>
       {showAdminLink && (
-        <div className="fixed top-4 right-4 flex items-center justify-between bg-blue-500 text-white px-3 py-1 rounded-full z-50">
+        <div className="fixed z-50 flex items-center justify-between px-3 py-1 text-white bg-blue-500 rounded-full top-4 right-4">
           <a
             href={`/admin/index.html#/~${window.location.pathname}`}
             className="text-xs"
