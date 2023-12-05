@@ -1,8 +1,23 @@
 {
+  "seo": {
+    "title": "Agencies",
+    "description": "Unleash the potential of your agency with TinaCMS. Simplify website development and content management for your clients."
+  },
   "blocks": [
     {
-      "headline": "TinaCMS is a perfect match for agencies.",
+      "headline": "TinaCMS is a fantastic CMS & I enjoy the admin.",
       "text": "Treat your clients to an amazing editor experience to go along with your beautiful websites. ",
+      "actions": [
+        {
+          "label": "Secondary Action",
+          "icon": false,
+          "variant": "default",
+          "size": "medium",
+          "url": "/"
+        }
+      ],
+      "margin": "",
+      "spacing": "gap-10",
       "_template": "hero"
     },
     {
@@ -30,6 +45,19 @@
         {
           "headline": "Accelerate Development",
           "text": "TinaCMS allows you to accelerate development by reusing existing templates and components. Tina's configuration is set up through code, so once you build a template you like, it can easily be reused to spin up new projects for new clients."
+        },
+        {
+          "headline": "A New Random Blog Appeared?",
+          "text": "Can't believe how easy. it is to get the https://tina.io website running on my localhost, with visual editng and all sorts of fun stuff!",
+          "actions": [
+            {
+              "label": "Secondary Action",
+              "icon": true,
+              "variant": "ghost",
+              "size": "medium",
+              "url": "https://treckstar.net"
+            }
+          ]
         }
       ],
       "_template": "featureGrid"
@@ -48,9 +76,5 @@
       ],
       "_template": "flying"
     }
-  ],
-  "seo": {
-    "title": "Agencies",
-    "description": "Unleash the potential of your agency with TinaCMS. Simplify website development and content management for your clients."
-  }
+  ]
 }
