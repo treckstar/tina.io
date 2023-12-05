@@ -8,10 +8,10 @@
     "node": ">=18"
   },
   "scripts": {
-    "dev": "tinacms dev  --noTelemetry  -c \"next dev\" ",
-    "build": "yarn create-rss && tinacms build && next build",
-    "export": "tinacms build && EXPORT_MODE=static,UNOPTIMIZED_IMAGES=true next build",
-    "prestart": "tinacms build  && npm run export",
+    "dev": "tinacms dev --datalayer-port 9321 --noTelemetry  -c \"next dev\" ",
+    "build": "yarn create-rss && tinacms build  --datalayer-port 9341   && next build",
+    "export": "tinacms build --datalayer-port 9322  && EXPORT_MODE=static,UNOPTIMIZED_IMAGES=true next build",
+    "prestart": "tinacms build --datalayer-port 9211   && npm run export",
     "static-start": "serve out",
     "start": "next start",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
