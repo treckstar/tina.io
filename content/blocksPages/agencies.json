@@ -20,25 +20,6 @@
     {
       "items": [
         {
-          "headline": "asdfasdfsadf",
-          "text": "asdfasdfasfd",
-          "actions": [
-            {
-              "label": "Secondary Action",
-              "icon": true,
-              "variant": "default",
-              "size": "medium",
-              "url": "/asfasdfasdfa"
-            }
-          ]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {
           "headline": "Visual Editing",
           "text": "TinaCMS provides an unmatched visual editing experience compared to other CMSs. "
         },
@@ -53,6 +34,19 @@
         {
           "headline": "Accelerate Development",
           "text": "TinaCMS allows you to accelerate development by reusing existing templates and components. Tina's configuration is set up through code, so once you build a template you like, it can easily be reused to spin up new projects for new clients."
+        },
+        {
+          "headline": "A New Random Blog Appeared?",
+          "text": "Can't believe how easy. it is to get the https://tina.io website running on my localhost, with visual editng and all sorts of fun stuff!",
+          "actions": [
+            {
+              "label": "Secondary Action",
+              "icon": true,
+              "variant": "ghost",
+              "size": "medium",
+              "url": "https://treckstar.net"
+            }
+          ]
         }
       ],
       "_template": "featureGrid"
