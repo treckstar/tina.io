@@ -5,8 +5,19 @@
   },
   "blocks": [
     {
-      "headline": "TinaCMS is a perfect match for agencies.",
+      "headline": "TinaCMS is a fantastic CMS & I enjoy the admin.",
       "text": "Treat your clients to an amazing editor experience to go along with your beautiful websites. ",
+      "actions": [
+        {
+          "label": "Secondary Action",
+          "icon": false,
+          "variant": "default",
+          "size": "medium",
+          "url": "/"
+        }
+      ],
+      "margin": "",
+      "spacing": "gap-10",
       "_template": "hero"
     },
     {
